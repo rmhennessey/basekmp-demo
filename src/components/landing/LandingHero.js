@@ -27,7 +27,7 @@ export default class LandingHero extends Component {
                     }
                     `}
                 </style>
-                <Button href="/listings" variant="hero">Find Your Next Adventure</Button>
+                <Button href="/listings" variant="hero">Start Exploring</Button>
             </p>
             </>
             </div>

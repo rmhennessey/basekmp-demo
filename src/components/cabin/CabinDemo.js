@@ -18,7 +18,7 @@ export default function CabinDemo() {
         <br/>
         <div className='please-flex'>
         <CabinProfileCard className='profile-card'/>
-        <DateSelect  className='div-sticky' />
+        <DateSelect />
         </div>
         <br/>
         <br/>

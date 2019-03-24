@@ -11,7 +11,6 @@ export default class NavBar extends Component {
             <Nav className="mr-auto">
             <Nav.Link href="/listings">Listings Demo</Nav.Link>
             <Nav.Link href="/cabin-demo">Profile Demo</Nav.Link>
-            {/* <Nav.Link href="#pricing">Pricing</Nav.Link> */}
             </Nav>
             <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />

@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import BookNowBtn from '../testers/BookNowBtn'
 
+
 const styles = {
   card: {
     width: 500,
@@ -42,9 +43,11 @@ function DateSelect(props) {
   const { classes } = props;
   const bull = <span className={classes.bullet}>•</span>;
 
+
+
   return (
-      <div>
-        <div className="fixed">
+      <div className="sticky-top">
+        <div>
           <Card className={classes.card}>
             <CardContent>
               <Typography variant="h5" component="h2">
