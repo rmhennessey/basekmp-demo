@@ -39,7 +39,7 @@ const styles = theme => ({
     transform: 'rotate(180deg)',
   },
   avatar: {
-    backgroundColor: red[500],
+    backgroundColor: '#00A388',
   },
 });
 
@@ -58,7 +58,7 @@ class CabinProfileCard extends React.Component {
         <CardHeader
           avatar={
             <Avatar aria-label="Recipe" className={classes.avatar}>
-              R
+            BK
             </Avatar>
           }
           action={
@@ -66,8 +66,8 @@ class CabinProfileCard extends React.Component {
               <MoreVertIcon />
             </IconButton>
           }
-          title="Shrimp and Chorizo Paella"
-          subheader="September 14, 2016"
+          title="Off the Grid in the White Mountains"
+          subheader="Lincoln, New Hampshire"
         />
         <CardMedia
           className={classes.media}
@@ -76,8 +76,7 @@ class CabinProfileCard extends React.Component {
         />
         <CardContent>
           <Typography component="p">
-            This impressive paella is a perfect party dish and a fun meal to cook together with your
-            guests. Add 1 cup of frozen peas along with the mussels, if you like.
+            Unplug and recharge in this perfect White Mountains Cabin. Enjoy 55 acres to yourself (complete with an outdoor shower and firepit) or be on hiking trails in under 10 minutes.
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
@@ -100,28 +99,18 @@ class CabinProfileCard extends React.Component {
         </CardActions>
         <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            <Typography paragraph>Method:</Typography>
+            <Typography paragraph><strong>What We Love About the Cabin:</strong></Typography>
             <Typography paragraph>
-              Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-              minutes.
+              It's just you and the trees up here. No neighbors, no traffic, no problems :)
             </Typography>
-            <Typography paragraph>
-              Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
-              heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
-              browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving
-              chicken and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion,
-              salt and pepper, and cook, stirring often until thickened and fragrant, about 10
-              minutes. Add saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
+            <Typography className='profile-card-type' paragraph>
+              Live free or die! And we mean it. When staying at the cabin, you will feel the freedom that comes with being off of the grid. The cabin provides everything you need - hot water, cold fridge (for cold beer), a fire pit and a comfy bed. Just bring your own s'mores kit and you are all set!
             </Typography>
-            <Typography paragraph>
-              Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook
-              without stirring, until most of the liquid is absorbed, 15 to 18 minutes. Reduce heat
-              to medium-low, add reserved shrimp and mussels, tucking them down into the rice, and
-              cook again without stirring, until mussels have opened and rice is just tender, 5 to 7
-              minutes more. (Discard any mussels that don’t open.)
+            <Typography className='profile-card-type' paragraph>
+              While there is plenty to see and do off of the property (Franconia Notch is only 10 minutes away), you don't have to leave to experience some of the best that New Hampshire offers. If you are fans of snow-shoeing, we have trail access right from the backyard.
             </Typography>
-            <Typography>
-              Set aside off of the heat to let rest for 10 minutes, and then serve.
+            <Typography className='profile-card-type'>
+              Questions? Feel free to reach out and we will respond asap.
             </Typography>
           </CardContent>
         </Collapse>

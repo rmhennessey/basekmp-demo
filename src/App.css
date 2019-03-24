@@ -130,7 +130,15 @@ div.sticky {
 }
 
 .review-column {
-  margin-left: 30px;
+  margin-left: 10%;
+  margin-bottom: 50px;
+}
+
+.review-column h3 {
+  margin-left: 8%;
+  text-align: left;
+  margin-bottom: 25px;
+  color: #00A388;
 }
 
 .jumbo {
@@ -391,6 +399,16 @@ div.sticky {
 
 .footer-btn-indy {
   margin: 10px;
+}
+
+.g-maps {
+  display: flex;
+  margin-left: 5%;
+  margin-bottom: 35px;
+}
+
+.profile-card-type {
+  text-align: left;
 }
 
 

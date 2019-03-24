@@ -17,6 +17,7 @@ export default class CabinCarousel extends Component {
       <p>Get off the grid and relax.</p>
     </Carousel.Caption>
   </Carousel.Item>
+
   <Carousel.Item>
     <img
       className="d-block w-100"
@@ -29,6 +30,7 @@ export default class CabinCarousel extends Component {
       <p>Hot dogs, s'mores and happiness.</p>
     </Carousel.Caption>
   </Carousel.Item>
+
   <Carousel.Item>
     <img
       className="d-block w-100"
@@ -41,6 +43,33 @@ export default class CabinCarousel extends Component {
       <p>You will be on the trails in 20 mins.</p>
     </Carousel.Caption>
   </Carousel.Item>
+
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="./cabinAssets/hammock.jpg"
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Hammock Comes Standard</h3>
+      <p>Relax after your hike up Franconia Notch</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="./cabinAssets/beer.jpg"
+      alt="Third slide"
+    />
+
+<Carousel.Caption>
+      <h3>Fill Up at Woodstock Brewery</h3>
+      <p>Woodstock Brewery is right down the road. Take some Growlers to go!</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  
 </Carousel>
       </div>
     )

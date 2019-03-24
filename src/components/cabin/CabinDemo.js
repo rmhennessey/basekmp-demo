@@ -4,6 +4,8 @@ import CabinEssentials from './CabinEssentials';
 import CabinProfileCard from './CabinProfileCard';
 import Reviews from './Reviews';
 import DateSelect from './DateSelect';
+import GoogleMaps from './GoogleMaps';
+
 
 
 export default function CabinDemo() {
@@ -16,11 +18,12 @@ export default function CabinDemo() {
         <br/>
         <div className='please-flex'>
         <CabinProfileCard className='profile-card'/>
-        <DateSelect  />
+        <DateSelect  className='div-sticky' />
         </div>
         <br/>
         <br/>
        <div>
+           <GoogleMaps />
            <Reviews />
        </div>
       
