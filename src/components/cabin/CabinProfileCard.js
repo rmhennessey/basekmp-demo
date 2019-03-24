@@ -71,8 +71,8 @@ class CabinProfileCard extends React.Component {
         />
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/paella.jpg"
-          title="Paella dish"
+          image="/cabinAssets/Adventure Snapshot.png"
+          title="Adventure Snapshot"
         />
         <CardContent>
           <Typography component="p">

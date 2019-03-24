@@ -27,7 +27,7 @@ export default function LandingCards() {
                         }
                         `}
                         </style>
-                    <Button variant="info">Start Your Adventure</Button>
+                    <Button href='/listings' variant="info">Start Your Adventure</Button>
                     </>
                 </Card.Body>
             </Card>
@@ -52,7 +52,7 @@ export default function LandingCards() {
                         }
                         `}
                         </style>
-                    <Button variant="info">Discover</Button>
+                    <Button href='/listings' variant="info">Discover</Button>
                     </>
                 </Card.Body>
             </Card>
@@ -77,7 +77,7 @@ export default function LandingCards() {
                         }
                         `}
                         </style>
-                    <Button variant="info">Join Today</Button>
+                    <Button href='/sign-up' variant="info">Join Today</Button>
                     </>
                 </Card.Body>
             </Card>

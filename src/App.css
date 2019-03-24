@@ -158,7 +158,7 @@ div.sticky {
   color: white;
 }
 
-.jumbo-2 h5 {
+.jumbo-2 h4 {
   color: #FF6138;
 }
 
@@ -436,12 +436,27 @@ div.sticky {
   color: #00A388;
 }
 
-.card-body {
-  
-    &:slider-thumb {
-      background: #00A388;
-    }
+.form-column-one {
+  width: 400px;
+  margin-top: 18%;
+  margin-bottom: 200px;
+  margin-left: 2.5%;
 }
+
+.form-column-one h5 {
+  color:#00A388;
+  margin-bottom: 25px;
+  width: 300px;
+}
+
+.form-column-one-form {
+  width: 300px;
+}
+
+.form-column-two {
+  max-width: 795px;
+}
+
 
 /* @campfire: #FF6138;
 @butter: #FFFF9D;
