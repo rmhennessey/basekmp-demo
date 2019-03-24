@@ -390,6 +390,7 @@ div.sticky {
 
 .footer-div {
   height: 220px;
+  margin-top: 60px;
 }
 
 .footer-btn {
@@ -411,10 +412,34 @@ div.sticky {
   text-align: left;
 }
 
+.listing-card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 
+.list-color a {
+  color: #00A388;
+}
+
+.input-group-append button{
+  background-color: #00A388;
+}
+
+.card-header h6 {
+  color: #00A388;
+}
+
+.card-body {
+  
+    &:slider-thumb {
+      background: #00A388;
+    }
+}
 
 /* @campfire: #FF6138;
 @butter: #FFFF9D;
 @light-moss: #BEEB9F;
 @pond-green: #79BD8F;
 @basekmp-green: #00A388; */
+

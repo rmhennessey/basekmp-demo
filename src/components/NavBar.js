@@ -4,9 +4,9 @@ import { Navbar, Button, Nav, Form, FormControl } from 'react-bootstrap';
 export default class NavBar extends Component {
   render() {
     return (
-      <div>
+      <div className="sticky-top">
         <>
-        <Navbar sticky="top" bg="light" variant="light">
+        <Navbar bg="light" variant="light">
             <Navbar.Brand href="/">Basekmp</Navbar.Brand>
             <Nav className="mr-auto">
             <Nav.Link href="/listings">Listings Demo</Nav.Link>

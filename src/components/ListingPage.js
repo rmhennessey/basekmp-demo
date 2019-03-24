@@ -6,7 +6,9 @@ import "../bootstrap-ecommerce-uikit/ui-ecommerce/css/bootstrap.css.map";
 import "../bootstrap-ecommerce-uikit/ui-ecommerce/css/responsive.css";
 import "../bootstrap-ecommerce-uikit/ui-ecommerce/css/responsive.css.map";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faSearch } from '@fortawesome/free-solid-svg-icons';
+import BookNowBtn from './testers/BookNowBtn';
+import { Button } from 'react-bootstrap';
 
 
 
@@ -36,20 +38,20 @@ export default class ListingPage extends Component {
 				<div class="input-group">
 				  <input class="form-control" placeholder="Search" type="text"/>
 				  <div class="input-group-append">
-				    <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+				    <button class="btn btn-primary" type="button"><FontAwesomeIcon icon={faSearch} color='white'/></button>
 				  </div>
 				</div>
 				</form>
 
-				<ul class="list-unstyled list-lg">
-					<li><a href="#">Hiking <span class="float-right badge badge-light round">142</span> </a></li>
-					<li><a href="#">Bike Trails  <span class="float-right badge badge-light round">3</span>  </a></li>
-                    <li><a href="#">Skiing <span class="float-right badge badge-light round">12</span>  </a></li>
-                    <li><a href="#">Snow Shoeing <span class="float-right badge badge-light round">12</span>  </a></li>
-					<li><a href="#">Kayaking <span class="float-right badge badge-light round">32</span>  </a></li>
-					<li><a href="#">Dark Sky <span class="float-right badge badge-light round">12</span>  </a></li>
-                    <li><a href="#">Walking Trails <span class="float-right badge badge-light round">12</span>  </a></li>
-                    <li><a href="#">Fishing <span class="float-right badge badge-light round">12</span>  </a></li>
+				<ul class="list-unstyled list-lg" >
+					<li className='list-color'><a href="#">Hiking <span class="float-right badge badge-light round">142</span> </a></li>
+					<li className='list-color'><a href="#">Bike Trails  <span class="float-right badge badge-light round">3</span>  </a></li>
+          <li className='list-color'><a href="#">Skiing <span class="float-right badge badge-light round">12</span>  </a></li>
+          <li className='list-color'><a href="#">Snow Shoeing <span class="float-right badge badge-light round">12</span>  </a></li>
+					<li className='list-color'><a href="#">Kayaking <span class="float-right badge badge-light round">32</span>  </a></li>
+					<li className='list-color'><a href="#">Dark Sky <span class="float-right badge badge-light round">12</span>  </a></li>
+          <li className='list-color'><a href="#">Walking Trails <span class="float-right badge badge-light round">12</span>  </a></li>
+          <li className='list-color'><a href="#">Fishing <span class="float-right badge badge-light round">12</span>  </a></li>
 				</ul>  
 			</div> 
 		</div>
@@ -167,14 +169,14 @@ export default class ListingPage extends Component {
 
 	<ul class="rating-stars">
 		<li style={{width:'80%'}} class="stars-active"> 
-		<FontAwesomeIcon icon={faStar} /> <FontAwesomeIcon icon={faStar} />
-		<FontAwesomeIcon icon={faStar}/> <FontAwesomeIcon icon={faStar} />
-		<FontAwesomeIcon icon={faStar} />
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar}  color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 		<li>
-		<FontAwesomeIcon icon={faStar} /> <FontAwesomeIcon icon={faStar} />
-		<FontAwesomeIcon icon={faStar}/> <FontAwesomeIcon icon={faStar} />
-		<FontAwesomeIcon icon={faStar} />
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 	</ul>
 	<div class="label-rating"> 132 reviews</div>
@@ -182,8 +184,26 @@ export default class ListingPage extends Component {
 </div>
 <hr/>
 	{/* <hr/> */}
-	<a href="#" class="btn  btn-primary"> Book now </a>
-	<a href="#" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Learn More </a>
+	{/* <a href="#" class="btn  btn-primary"> Book now </a>
+	<a href="#" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Learn More </a> */}
+		<div className='listing-card-footer'>
+						<>
+                        <style type="text/css">
+                        {`
+                        .btn-learn {
+                            background-color: white;
+														color: #00A388;
+														border: 1px solid #00A388;
+                        }
+                        `}
+                        </style>
+                    <BookNowBtn />
+                    <Button href='./cabin-demo' variant="learn" >
+                        Learn More
+                    </Button>
+              </>
+			</div>
+
 </article> 
 		</aside> 
 	</div> 
@@ -223,28 +243,46 @@ export default class ListingPage extends Component {
   <dt class="col-sm-3">Setting</dt>
   <dd class="col-sm-9">Mountain View </dd>
 </dl>
+
 <div class="rating-wrap">
+
+	<div class="rating-wrap">
 
 	<ul class="rating-stars">
 		<li style={{width:'80%'}} class="stars-active"> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar}  color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 		<li>
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 	</ul>
-	<div class="label-rating">132 reviews</div>
+	<div class="label-rating"> 132 reviews</div>
 	{/* <div class="label-rating">154 orders </div> */}
 </div>
 <hr/>
+		<div className='listing-card-footer'>
+						<>
+                        <style type="text/css">
+                        {`
+                        .btn-learn {
+                            background-color: white;
+														color: #00A388;
+														border: 1px solid #00A388;
+                        }
+                        `}
+                        </style>
+                    <BookNowBtn />
+                    <Button href='./cabin-demo' variant="learn" >
+                        Learn More
+                    </Button>
+              </>
+			</div>
+			</div>
 
-	{/* <hr/> */}
-	<a href="#" class="btn  btn-primary"> Book now </a>
-	<a href="#" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Learn More </a>
 </article> 
 		</aside> 
 	</div> 
@@ -284,28 +322,46 @@ export default class ListingPage extends Component {
   <dt class="col-sm-3">Setting</dt>
   <dd class="col-sm-9">Off the Grid </dd>
 </dl>
+
 <div class="rating-wrap">
+
+	<div class="rating-wrap">
 
 	<ul class="rating-stars">
 		<li style={{width:'80%'}} class="stars-active"> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar}  color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 		<li>
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 	</ul>
-	<div class="label-rating">132 reviews</div>
+	<div class="label-rating"> 132 reviews</div>
 	{/* <div class="label-rating">154 orders </div> */}
 </div>
 <hr/>
+		<div className='listing-card-footer'>
+						<>
+                        <style type="text/css">
+                        {`
+                        .btn-learn {
+                            background-color: white;
+														color: #00A388;
+														border: 1px solid #00A388;
+                        }
+                        `}
+                        </style>
+                    <BookNowBtn />
+                    <Button href='./cabin-demo' variant="learn" >
+                        Learn More
+                    </Button>
+              </>
+			</div>
+			</div>
 
-	{/* <hr/> */}
-	<a href="#" class="btn  btn-primary"> Book now </a>
-	<a href="#" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Learn More </a>
 </article> 
 		</aside> 
 	</div> 
@@ -345,28 +401,46 @@ export default class ListingPage extends Component {
   <dt class="col-sm-3">Setting</dt>
   <dd class="col-sm-9">On the Water </dd>
 </dl>
+
 <div class="rating-wrap">
+
+	<div class="rating-wrap">
 
 	<ul class="rating-stars">
 		<li style={{width:'80%'}} class="stars-active"> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar}  color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 		<li>
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 	</ul>
-	<div class="label-rating">132 reviews</div>
+	<div class="label-rating"> 132 reviews</div>
 	{/* <div class="label-rating">154 orders </div> */}
 </div>
 <hr/>
+		<div className='listing-card-footer'>
+						<>
+                        <style type="text/css">
+                        {`
+                        .btn-learn {
+                            background-color: white;
+														color: #00A388;
+														border: 1px solid #00A388;
+                        }
+                        `}
+                        </style>
+                    <BookNowBtn />
+                    <Button href='./cabin-demo' variant="learn" >
+                        Learn More
+                    </Button>
+              </>
+			</div>
+			</div>
 
-	{/* <hr/> */}
-	<a href="#" class="btn  btn-primary"> Book now </a>
-	<a href="#" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Learn More </a>
 </article> 
 		</aside> 
 	</div> 
@@ -406,28 +480,46 @@ export default class ListingPage extends Component {
   <dt class="col-sm-3">Setting</dt>
   <dd class="col-sm-9">Solitude </dd>
 </dl>
+
 <div class="rating-wrap">
+
+	<div class="rating-wrap">
 
 	<ul class="rating-stars">
 		<li style={{width:'80%'}} class="stars-active"> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar}  color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 		<li>
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 	</ul>
-	<div class="label-rating">132 reviews</div>
+	<div class="label-rating"> 132 reviews</div>
 	{/* <div class="label-rating">154 orders </div> */}
 </div>
 <hr/>
+		<div className='listing-card-footer'>
+						<>
+                        <style type="text/css">
+                        {`
+                        .btn-learn {
+                            background-color: white;
+														color: #00A388;
+														border: 1px solid #00A388;
+                        }
+                        `}
+                        </style>
+                    <BookNowBtn />
+                    <Button href='./cabin-demo' variant="learn" >
+                        Learn More
+                    </Button>
+              </>
+			</div>
+			</div>
 
-	{/* <hr/> */}
-	<a href="#" class="btn  btn-primary"> Book now </a>
-	<a href="#" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Learn More </a>
 </article> 
 		</aside> 
 	</div> 
@@ -466,27 +558,46 @@ export default class ListingPage extends Component {
   <dt class="col-sm-3">Setting</dt>
   <dd class="col-sm-9">Solitude </dd>
 </dl>
+
 <div class="rating-wrap">
+
+	<div class="rating-wrap">
 
 	<ul class="rating-stars">
 		<li style={{width:'80%'}} class="stars-active"> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar}  color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 		<li>
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 	</ul>
-	<div class="label-rating">132 reviews</div>
+	<div class="label-rating"> 132 reviews</div>
 	{/* <div class="label-rating">154 orders </div> */}
 </div>
 <hr/>
-	{/* <hr/> */}
-	<a href="#" class="btn  btn-primary"> Book now </a>
-	<a href="#" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Learn More </a>
+		<div className='listing-card-footer'>
+						<>
+                        <style type="text/css">
+                        {`
+                        .btn-learn {
+                            background-color: white;
+														color: #00A388;
+														border: 1px solid #00A388;
+                        }
+                        `}
+                        </style>
+                    <BookNowBtn />
+                    <Button href='./cabin-demo' variant="learn" >
+                        Learn More
+                    </Button>
+              </>
+			</div>
+			</div>
+
 </article> 
 		</aside> 
 	</div> 
@@ -526,28 +637,46 @@ export default class ListingPage extends Component {
   <dt class="col-sm-3">Setting</dt>
   <dd class="col-sm-9">Mountain View </dd>
 </dl>
+
 <div class="rating-wrap">
+
+	<div class="rating-wrap">
 
 	<ul class="rating-stars">
 		<li style={{width:'80%'}} class="stars-active"> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar}  color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 		<li>
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 	</ul>
-	<div class="label-rating">132 reviews</div>
+	<div class="label-rating"> 132 reviews</div>
 	{/* <div class="label-rating">154 orders </div> */}
 </div>
 <hr/>
+		<div className='listing-card-footer'>
+						<>
+                        <style type="text/css">
+                        {`
+                        .btn-learn {
+                            background-color: white;
+														color: #00A388;
+														border: 1px solid #00A388;
+                        }
+                        `}
+                        </style>
+                    <BookNowBtn />
+                    <Button href='./cabin-demo' variant="learn" >
+                        Learn More
+                    </Button>
+              </>
+			</div>
+			</div>
 
-	{/* <hr/> */}
-	<a href="#" class="btn  btn-primary"> Book now </a>
-	<a href="#" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Learn More </a>
 </article> 
 		</aside> 
 	</div> 
@@ -587,29 +716,46 @@ export default class ListingPage extends Component {
   <dt class="col-sm-3">Setting</dt>
   <dd class="col-sm-9">Woods </dd>
 </dl>
+
 <div class="rating-wrap">
+
+	<div class="rating-wrap">
 
 	<ul class="rating-stars">
 		<li style={{width:'80%'}} class="stars-active"> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar}  color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 		<li>
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 	</ul>
-	<div class="label-rating">132 reviews</div>
+	<div class="label-rating"> 132 reviews</div>
 	{/* <div class="label-rating">154 orders </div> */}
 </div>
 <hr/>
+		<div className='listing-card-footer'>
+						<>
+                        <style type="text/css">
+                        {`
+                        .btn-learn {
+                            background-color: white;
+														color: #00A388;
+														border: 1px solid #00A388;
+                        }
+                        `}
+                        </style>
+                    <BookNowBtn />
+                    <Button href='./cabin-demo' variant="learn" >
+                        Learn More
+                    </Button>
+              </>
+			</div>
+			</div>
 
-
-	{/* <hr/> */}
-	<a href="#" class="btn  btn-primary"> Book now </a>
-	<a href="#" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Learn More </a>
 </article> 
 		</aside> 
 	</div> 
@@ -648,26 +794,46 @@ export default class ListingPage extends Component {
   <dt class="col-sm-3">Setting</dt>
   <dd class="col-sm-9">On the Water </dd>
 </dl>
+
 <div class="rating-wrap">
+
+	<div class="rating-wrap">
 
 	<ul class="rating-stars">
 		<li style={{width:'80%'}} class="stars-active"> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138'/> <FontAwesomeIcon icon={faStar}  color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 		<li>
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i> 
-			<i class="fa fa-star"></i> 
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138'/>
+		<FontAwesomeIcon icon={faStar} color='#FF6138' /> <FontAwesomeIcon icon={faStar} color='#FF6138' />
+		<FontAwesomeIcon icon={faStar} color='#FF6138' />
 		</li>
 	</ul>
-	<div class="label-rating">132 reviews</div>
+	<div class="label-rating"> 132 reviews</div>
 	{/* <div class="label-rating">154 orders </div> */}
 </div>
 <hr/>
-	<a href="#" class="btn  btn-primary"> Book now </a>
-	<a href="#" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Learn More </a>
+		<div className='listing-card-footer'>
+						<>
+                        <style type="text/css">
+                        {`
+                        .btn-learn {
+                            background-color: white;
+														color: #00A388;
+														border: 1px solid #00A388;
+                        }
+                        `}
+                        </style>
+                    <BookNowBtn />
+                    <Button href='./cabin-demo' variant="learn" >
+                        Learn More
+                    </Button>
+              </>
+			</div>
+			</div>
+
 </article> 
 		</aside> 
 	</div> 

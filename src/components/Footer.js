@@ -4,7 +4,7 @@ import { Card, Button } from 'react-bootstrap';
 export default class Footer extends Component {
   render() {
     return (
-      <div>
+      <div >
         <Card className='footer-div'>
             <Card.Footer style={{backgroundColor: '#00A388', color:'white'}} as="h5">BASEKMP - Your Home for Adventure</Card.Footer>
             <Card.Body>

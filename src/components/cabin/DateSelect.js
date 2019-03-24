@@ -5,7 +5,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
-import BookNowBtn from './BookNowBtn';
+import BookNowBtn from '../testers/BookNowBtn'
 
 const styles = {
   card: {
@@ -44,7 +44,7 @@ function DateSelect(props) {
 
   return (
       <div>
-        <div className="sticky">
+        <div className="fixed">
           <Card className={classes.card}>
             <CardContent>
               <Typography variant="h5" component="h2">

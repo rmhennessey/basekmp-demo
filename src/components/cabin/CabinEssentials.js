@@ -35,7 +35,7 @@ function CabinEssentials(props) {
         <ExpansionPanelDetails>
                 <ListItem>
                             <ListItemIcon>
-                                <FontAwesomeIcon icon={faHiking} />
+                                <FontAwesomeIcon icon={faHiking} color='#BEEB9F'/>
                             </ListItemIcon>
                             <ListItemText
                             primary="Hiking"
@@ -44,7 +44,7 @@ function CabinEssentials(props) {
                 </ListItem>
                 <ListItem>
                             <ListItemIcon>
-                            <FontAwesomeIcon icon={faTree} />
+                            <FontAwesomeIcon icon={faTree} color='#00A388'/>
                             </ListItemIcon>
                             <ListItemText
                             primary="In the Woods"
@@ -53,7 +53,7 @@ function CabinEssentials(props) {
                 </ListItem>
                 <ListItem>
                             <ListItemIcon>
-                            <FontAwesomeIcon icon={faFire} />
+                            <FontAwesomeIcon icon={faFire} color='#FF6138'/>
                             </ListItemIcon>
                             <ListItemText
                             primary="Fire Pit"
@@ -62,7 +62,7 @@ function CabinEssentials(props) {
                 </ListItem>
                 <ListItem>
                             <ListItemIcon>
-                            <FontAwesomeIcon icon={faBeer} />
+                            <FontAwesomeIcon icon={faBeer} color='#FFFF9D'/>
                             </ListItemIcon>
                             <ListItemText
                             primary="Local Brewery"
@@ -78,7 +78,7 @@ function CabinEssentials(props) {
         <ExpansionPanelDetails>
         <ListItem>
                 <ListItemIcon>
-                <FontAwesomeIcon icon={faMountain} />
+                <FontAwesomeIcon icon={faMountain} color='#00A388'/>
                 </ListItemIcon>
                 <ListItemText
                 primary="The Presidential Traverse"
