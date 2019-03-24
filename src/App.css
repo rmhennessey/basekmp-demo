@@ -418,12 +418,17 @@ div.sticky {
   justify-content: space-evenly;
 }
 
+.listing-price-btn{
+  margin-left: 32%;
+}
+
 .list-color a {
   color: #00A388;
 }
 
 .input-group-append button{
   background-color: #00A388;
+  border: 1px solid #00A388;
 }
 
 .card-header h6 {

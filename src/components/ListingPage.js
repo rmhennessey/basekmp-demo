@@ -76,7 +76,20 @@ export default class ListingPage extends Component {
 				  <input class="form-control" placeholder="$1,0000" type="number"/>
 				</div>
 				</div>
-				<button class="btn btn-block btn-outline-primary">Apply</button>
+				<>
+						<style type="text/css">
+						{`
+						.btn-apply {
+								background-color: white;
+								color: #00A388;
+								border: 1px solid #00A388;
+						}
+						`}
+						</style>
+				<Button className='listing-price-btn' href='./cabin-demo' variant="apply" size="lg">
+						Apply
+				</Button>
+              </>
 			</div> 
 		</div> 
 	</article> 
