@@ -2,18 +2,21 @@ import React, { Component } from 'react';
 import { Navbar, Button, Nav, Form, FormControl } from 'react-bootstrap';
 
 export default class NavBar extends Component {
+  constructor(props) {
+    super(props)
+  }
   render() {
     return (
       <div className="sticky-top">
         <>
         <Navbar bg="light" variant="light">
-            <Navbar.Brand href="/">Basekmp</Navbar.Brand>
+            <Navbar.Brand style={{ color:'#FF6138', fontWeight: 'bold' }}href="/">BASEKMP</Navbar.Brand>
             <Nav className="mr-auto">
             <Nav.Link href="/listings">Listings Demo</Nav.Link>
             <Nav.Link href="/cabin-demo">Profile Demo</Nav.Link>
             </Nav>
-            <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            {/* <Form inline>
+            <FormControl onChange={this.props.searchHandler} type="text" placeholder="Search" className="mr-sm-2" />
             <>
                         <style type="text/css">
                         {`
@@ -31,7 +34,7 @@ export default class NavBar extends Component {
                         </style>
             <Button variant="search">Search</Button>
             </>
-            </Form>
+            </Form> */}
         </Navbar>
         </>
       </div>
